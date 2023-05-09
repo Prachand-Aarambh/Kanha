@@ -1,0 +1,1434 @@
+[50043262@MBP50043262 ~]$ pwd
+/home/tom
+
+[
+50043262@MBP50043262 ~]$ mkdir tom_repo
+
+[50043262@MBP50043262 ~]$ cd tom_repo/
+
+[50043262@MBP50043262]$ git init
+Initialized empty Git repository in /home/tom/tom_repo/.git/
+
+[50043262@MBP50043262]$ echo 'TODO: Add contents for README' > README
+
+[50043262@MBP50043262]$ git status -s
+?? README
+
+[50043262@MBP50043262]$ git add .
+
+[50043262@MBP50043262]$ git status -s
+A README
+
+[50043262@MBP50043262]$ git commit -m 'Initial commit'
+[50043262@MBP50043262]$ git log
+we have to add the repository as a remote, this is a one-time operation. After this, he can safely push the changes to the remote repository.
+
+[50043262@MBP50043262]$ git remote add origin gituser@git.server.com:project.git
+
+[50043262@MBP50043262]$ git push origin master
+[jerry@CentOS project]$ git show cbe1249b140dad24b2c35b15cc7e26a6f02d2277
+
+[jerry@CentOS project]$ git push origin master
+
+Remove a global identity
+git config --global --remove-section user.name
+git config --global --remove-section user.email
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ ls
+test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit;
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git add test.txt
+warning: in the working copy of 'test.txt', LF will be replaced by CRLF the next time Git touches it
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test.txt
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit;
+Aborting commit due to empty commit message.
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git add --all
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test.txt
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git add -A
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit -m "This is my first word to add in git directory"
+[master (root-commit) d04e32a] This is my first word to add in git directory
+ Committer: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$
+$ git commit -m "This is my first word to add in git directory"
+[master (root-commit) d04e32a] This is my first word to add in git directory
+ Committer: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status --short
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit -m -a "Updated new line in 2nd u"
+error: pathspec 'Updated new line in 2nd u' did not match any file(s) known to git
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit -a -m "3rd command line updation"
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git log
+commit d04e32ace4014e756c3fb5bbbf7f3ba5c5a5be32 (HEAD -> master)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Dec 28 12:50:17 2022 +0530
+
+    This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ $ git help -a
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                     Add file contents to the index
+   am                      Apply a series of patches from a mailbox
+   archive                 Create an archive of files from a named tree
+   bisect                  Use binary search to find the commit that introduced a bug
+   branch                  List, create, or delete branches
+   bundle                  Move objects and refs by archive
+   checkout                Switch branches or restore working tree files
+   cherry-pick             Apply the changes introduced by some existing commits
+   citool                  Graphical alternative to git-commit
+   clean                   Remove untracked files from the working tree
+   clone                   Clone a repository into a new directory
+   commit                  Record changes to the repository
+   describe                Give an object a human readable name based on an available ref
+   diff                    Show changes between commits, commit and working tree, etc
+   fetch                   Download objects and refs from another repository
+   format-patch            Prepare patches for e-mail submission
+   gc                      Cleanup unnecessary files and optimize the local repository
+   gitk                    The Git repository browser
+   grep                    Print lines matching a pattern
+   gui                     A portable graphical interface to Git
+   init                    Create an empty Git repository or reinitialize an existing one
+   log                     Show commit logs
+   maintenance             Run tasks to optimize Git repository data
+   merge                   Join two or more development histories together
+   mv                      Move or rename a file, a directory, or a symlink
+   notes                   Add or inspect object notes
+   pull                    Fetch from and integrate with another repository or a local branch
+   push                    Update remote refs along with associated objects
+   range-diff              Compare two commit ranges (e.g. two versions of a branch)
+   rebase                  Reapply commits on top of another base tip
+   reset                   Reset current HEAD to the specified state
+   restore                 Restore working tree files
+   revert                  Revert some existing commits
+   rm                      Remove files from the working tree and from the index
+   scalar                  A tool for managing large Git repositories
+   shortlog                Summarize 'git log' output
+   show                    Show various types of objects
+   sparse-checkout         Reduce your working tree to a subset of tracked files
+   stash                   Stash the changes in a dirty working directory away
+   status                  Show the working tree status
+   submodule               Initialize, update or inspect submodules
+   switch                  Switch branches
+   tag                     Create, list, delete or verify a tag object signed with GPG
+   worktree                Manage multiple working trees
+
+Ancillary Commands / Manipulators
+   config                  Get and set repository or global options
+   fast-export             Git data exporter
+   fast-import             Backend for fast Git data importers
+   filter-branch           Rewrite branches
+   mergetool               Run merge conflict resolution tools to resolve merge conflicts
+   pack-refs               Pack heads and tags for efficient repository access
+   prune                   Prune all unreachable objects from the object database
+   reflog                  Manage reflog information
+   remote                  Manage set of tracked repositories
+   repack                  Pack unpacked objects in a repository
+   replace                 Create, list, delete refs to replace objects
+
+Ancillary Commands / Interrogators
+   annotate                Annotate file lines with commit information
+   blame                   Show what revision and author last modified each line of a file
+   bugreport               Collect information for user to file a bug report
+   count-objects           Count unpacked number of objects and their disk consumption
+   diagnose                Generate a zip archive of diagnostic information
+   difftool                Show changes using common diff tools
+   fsck                    Verifies the connectivity and validity of the objects in the database
+   gitweb                  Git web interface (web frontend to Git repositories)
+   help                    Display help information about Git
+   instaweb                Instantly browse your working repository in gitweb
+   merge-tree              Perform merge without touching index or working tree
+   rerere                  Reuse recorded resolution of conflicted merges
+   show-branch             Show branches and their commits
+   verify-commit           Check the GPG signature of commits
+   verify-tag              Check the GPG signature of tags
+   version                 Display version information about Git
+   whatchanged             Show logs with difference each commit introduces
+
+Interacting with Others
+   archimport              Import a GNU Arch repository into Git
+   cvsexportcommit         Export a single commit to a CVS checkout
+   cvsimport               Salvage your data out of another SCM people love to hate
+   cvsserver               A CVS server emulator for Git
+   imap-send               Send a collection of patches from stdin to an IMAP folder
+   p4                      Import from and submit to Perforce repositories
+   quiltimport             Applies a quilt patchset onto the current branch
+   request-pull            Generates a summary of pending changes
+   send-email              Send a collection of patches as emails
+   svn                     Bidirectional operation between a Subversion repository and Git
+
+Low-level Commands / Manipulators
+   apply                   Apply a patch to files and/or to the index
+   checkout-index          Copy files from the index to the working tree
+   commit-graph            Write and verify Git commit-graph files
+   commit-tree             Create a new commit object
+   hash-object             Compute object ID and optionally creates a blob from a file
+   index-pack              Build pack index file for an existing packed archive
+   merge-file              Run a three-way file merge
+   merge-index             Run a merge for files needing merging
+   mktag                   Creates a tag object with extra validation
+   mktree                  Build a tree-object from ls-tree formatted text
+   multi-pack-index        Write and verify multi-pack-indexes
+   pack-objects            Create a packed archive of objects
+   prune-packed            Remove extra objects that are already in pack files
+   read-tree               Reads tree information into the index
+   symbolic-ref            Read, modify and delete symbolic refs
+   unpack-objects          Unpack objects from a packed archive
+   update-index            Register file contents in the working tree to the index
+   update-ref              Update the object name stored in a ref safely
+   write-tree              Create a tree object from the current index
+
+Low-level Commands / Interrogators
+   cat-file                Provide content or type and size information for repository objects
+   cherry                  Find commits yet to be applied to upstream
+   diff-files              Compares files in the working tree and the index
+   diff-index              Compare a tree to the working tree or index
+   diff-tree               Compares the content and mode of blobs found via two tree objects
+   for-each-ref            Output information on each ref
+   for-each-repo           Run a Git command on a list of repositories
+   get-tar-commit-id       Extract commit ID from an archive created using git-archive
+   ls-files                Show information about files in the index and the working tree
+   ls-remote               List references in a remote repository
+   ls-tree                 List the contents of a tree object
+   merge-base              Find as good common ancestors as possible for a merge
+   name-rev                Find symbolic names for given revs
+   pack-redundant          Find redundant pack files
+   rev-list                Lists commit objects in reverse chronological order
+   rev-parse               Pick out and massage parameters
+   show-index              Show packed archive index
+   show-ref                List references in a local repository
+   unpack-file             Creates a temporary file with a blob's contents
+   var                     Show a Git logical variable
+   verify-pack             Validate packed Git archive files
+
+Low-level Commands / Syncing Repositories
+   daemon                  A really simple server for Git repositories
+   fetch-pack              Receive missing objects from another repository
+   http-backend            Server side implementation of Git over HTTP
+   send-pack               Push objects over Git protocol to another repository
+   update-server-info      Update auxiliary info file to help dumb servers
+
+Low-level Commands / Internal Helpers
+   check-attr              Display gitattributes information
+   check-ignore            Debug gitignore / exclude files
+   check-mailmap           Show canonical names and email addresses of contacts
+   check-ref-format        Ensures that a reference name is well formed
+   column                  Display data in columns
+   credential              Retrieve and store user credentials
+   credential-cache        Helper to temporarily store passwords in memory
+   credential-store        Helper to store credentials on disk
+   fmt-merge-msg           Produce a merge commit message
+   hook                    Run git hooks
+   interpret-trailers      Add or parse structured information in commit messages
+   mailinfo                Extracts patch and authorship from a single e-mail message
+   mailsplit               Simple UNIX mbox splitter program
+   merge-one-file          The standard helper program to use with git-merge-index
+   patch-id                Compute unique ID for a patch
+   sh-i18n                 Git's i18n setup code for shell scripts
+   sh-setup                Common Git shell script setup code
+   stripspace              Remove unnecessary whitespace
+
+User-facing repository, command and file interfaces
+   attributes              Defining attributes per path
+   cli                     Git command-line interface and conventions
+   hooks                   Hooks used by Git
+   ignore                  Specifies intentionally untracked files to ignore
+   mailmap                 Map author/committer names and/or E-Mail addresses
+   modules                 Defining submodule properties
+   repository-layout       Git Repository Layout
+   revisions               Specifying revisions and ranges for Git
+
+Developer-facing file formats, protocols and other interfaces
+   format-bundle           The bundle file format
+   format-chunk            Chunk-based file formats
+   format-commit-graph     Git commit-graph format
+   format-index            Git index format
+   format-pack             Git pack format
+   format-signature        Git cryptographic signature formats
+   protocol-capabilities   Protocol v0 and v1 capabilities
+   protocol-common         Things common to various protocols
+   protocol-http           Git HTTP-based protocols
+   protocol-pack           How packs are transferred over-the-wire
+   protocol-v2             Git Wire Protocol, Version 2
+
+External commands
+   askpass
+   askyesno
+   credential-helper-selector
+   credential-manager
+   credential-manager-core
+   credential-manager-ui
+   flow
+   lfs
+   update-git-for-windows
+(END)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git help -a
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                     Add file contents to the index
+   am                      Apply a series of patches from a mailbox
+   archive                 Create an archive of files from a named tree
+   bisect                  Use binary search to find the commit that introduced a bug
+   branch                  List, create, or delete branches
+   bundle                  Move objects and refs by archive
+   checkout                Switch branches or restore working tree files
+   cherry-pick             Apply the changes introduced by some existing commits
+   citool                  Graphical alternative to git-commit
+   clean                   Remove untracked files from the working tree
+   clone                   Clone a repository into a new directory
+   commit                  Record changes to the repository
+   describe                Give an object a human readable name based on an available ref
+   diff                    Show changes between commits, commit and working tree, etc
+   fetch                   Download objects and refs from another repository
+   format-patch            Prepare patches for e-mail submission
+   gc                      Cleanup unnecessary files and optimize the local repository
+   gitk                    The Git repository browser
+   grep                    Print lines matching a pattern
+   gui                     A portable graphical interface to Git
+   init                    Create an empty Git repository or reinitialize an existing one
+   log                     Show commit logs
+   maintenance             Run tasks to optimize Git repository data
+   merge                   Join two or more development histories together
+   mv                      Move or rename a file, a directory, or a symlink
+   notes                   Add or inspect object notes
+   pull                    Fetch from and integrate with another repository or a local branch
+   push                    Update remote refs along with associated objects
+   range-diff              Compare two commit ranges (e.g. two versions of a branch)
+   rebase                  Reapply commits on top of another base tip
+   reset                   Reset current HEAD to the specified state
+   restore                 Restore working tree files
+   revert                  Revert some existing commits
+   rm                      Remove files from the working tree and from the index
+   scalar                  A tool for managing large Git repositories
+   shortlog                Summarize 'git log' output
+   show                    Show various types of objects
+   sparse-checkout         Reduce your working tree to a subset of tracked files
+   stash                   Stash the changes in a dirty working directory away
+   status                  Show the working tree status
+   submodule               Initialize, update or inspect submodules
+   switch                  Switch branches
+   tag                     Create, list, delete or verify a tag object signed with GPG
+   worktree                Manage multiple working trees
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git help -All
+error: unknown switch `A'
+usage: git help [-a|--all] [--[no-]verbose] [--[no-]external-commands] [--[no-]aliases]
+   or: git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]
+   or: git help [-g|--guides]
+   or: git help [-c|--config]
+   or: git help [--user-interfaces]
+   or: git help [--developer-interfaces]
+
+    -a, --all             print all available commands
+    --external-commands   show external commands in --all
+    --aliases             show aliases in --all
+    -m, --man             show man page
+    -w, --web             show manual in web browser
+    -i, --info            show info page
+    -v, --verbose         print command description
+    -g, --guides          print list of useful guides
+    --user-interfaces     print list of user-facing repository, command and file interfaces
+    --developer-interfaces
+                          print list of file formats, protocols and other developer interfaces
+    -c, --config          print all configuration variable names
+
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git log
+commit d04e32ace4014e756c3fb5bbbf7f3ba5c5a5be32 (HEAD -> master, mera-bharat-mahan)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Dec 28 12:50:17 2022 +0530
+
+    This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git init;
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git commit -a
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch
+* master
+  mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git checkout mera-bharat-mahan
+Switched to branch 'mera-bharat-mahan'
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git branch
+  master
+* mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git add -all
+error: did you mean `--all` (with two dashes)?
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git add --all
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git branch
+  master
+* mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git status
+On branch mera-bharat-mahan
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ gid add test.txt
+bash: gid: command not found
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git add test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git commit
+On branch mera-bharat-mahan
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git stTUS
+git: 'stTUS' is not a git command. See 'git --help'.
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ GIT STATUS
+fatal: cannot handle STATUS as a builtin
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git stats
+git: 'stats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git status
+On branch mera-bharat-mahan
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (mera-bharat-mahan)
+$ git checkout master
+Switched to branch 'master'
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch
+* master
+  mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git merge mera-bharat-mahan
+Already up to date.
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch
+* master
+  mera-bharat-mahan
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch -d mera-bharat-mahan
+Deleted branch mera-bharat-mahan (was d04e32a).
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+$ git branch
+* master
+
+50043262@MBP50043262 MINGW64 ~/meraproject (master)
+C:\Users\50043262\meraproject
+
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ ls -lrt
+total 16873
+drwxr-xr-x 1 50043262 1049089        0 Jun 30  2022 'mcafee dlp quarantined files'/
+drwxr-xr-x 1 50043262 1049089        0 Sep 27 10:22  OneDrive/
+lrwxrwxrwx 1 50043262 1049089       61 Dec 16 16:40  Templates -> /c/Users/50043262/AppData/Roaming/Microsoft/Windows/Templates/
+lrwxrwxrwx 1 50043262 1049089       62 Dec 16 16:40 'Start Menu' -> '/c/Users/50043262/AppData/Roaming/Microsoft/Windows/Start Menu'/
+lrwxrwxrwx 1 50043262 1049089       58 Dec 16 16:40  SendTo -> /c/Users/50043262/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 50043262 1049089       58 Dec 16 16:40  Recent -> /c/Users/50043262/AppData/Roaming/Microsoft/Windows/Recent/
+lrwxrwxrwx 1 50043262 1049089       69 Dec 16 16:40  PrintHood -> '/c/Users/50043262/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 50043262 1049089       69 Dec 16 16:40  NetHood -> '/c/Users/50043262/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+lrwxrwxrwx 1 50043262 1049089       27 Dec 16 16:40 'My Documents' -> /c/Users/50043262/Documents/
+lrwxrwxrwx 1 50043262 1049089       31 Dec 16 16:40 'Local Settings' -> /c/Users/50043262/AppData/Local/
+lrwxrwxrwx 1 50043262 1049089       61 Dec 16 16:40  Cookies -> /c/Users/50043262/AppData/Local/Microsoft/Windows/INetCookies/
+lrwxrwxrwx 1 50043262 1049089       33 Dec 16 16:40 'Application Data' -> /c/Users/50043262/AppData/Roaming/
+-rw-r--r-- 1 50043262 1049089  2621440 Dec 16 16:40  ntuser.dat.LOG2
+-rw-r--r-- 1 50043262 1049089  2737152 Dec 16 16:40  ntuser.dat.LOG1
+-rw-r--r-- 1 50043262 1049089   524288 Dec 16 16:40  NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TMContainer00000000000000000002.regtrans-ms
+-rw-r--r-- 1 50043262 1049089   524288 Dec 16 16:40  NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 50043262 1049089    65536 Dec 16 16:40  NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TM.blf
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:41  AppData/
+-rw-r--r-- 1 50043262 1049089       20 Dec 16 16:46  ntuser.ini
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Videos/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Pictures/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Favorites/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Contacts/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Searches/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Music/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Documents/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47 'Saved Games'/
+drwxr-xr-x 1 50043262 1049089        0 Dec 16 16:47  Links/
+drwxr-xr-x 1 50043262 1049089        0 Dec 29 10:19  meraproject/
+drwxr-xr-x 1 50043262 1049089        0 Dec 30 17:32  Desktop/
+-rw-r--r-- 1 50043262 1049089 10747904 Dec 30 18:07  NTUSER.DAT
+drwxr-xr-x 1 50043262 1049089        0 Jan  3 09:09  IntelGraphicsProfiles/
+drwxr-xr-x 1 50043262 1049089        0 Jan  3 11:35  Downloads/
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ git branch
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ git remote
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ cd meraproject
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git remote
+origin
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git branch
+* main
+  master
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ ls -lrt
+total 2
+-rw-r--r-- 1 50043262 1049089 45 Dec 28 11:30 test.txt
+-rw-r--r-- 1 50043262 1049089 36 Dec 30 13:04 meraatest1.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ cat notpad.html
+cat: notpad.html: No such file or directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ cat > notepad.html
+this is the third file for testing.
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ cat notpad.html
+cat: notpad.html: No such file or directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ ll
+total 3
+-rw-r--r-- 1 50043262 1049089 36 Dec 30 13:04 meraatest1.txt
+-rw-r--r-- 1 50043262 1049089 36 Jan  3 11:39 notepad.html
+-rw-r--r-- 1 50043262 1049089 45 Dec 28 11:30 test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ vi notepad.html
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ cat notepad.html
+this is the third file for testing.
+
+hi jab tak naya hai dekho.
+dont touch around code
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   meraatest1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        notepad.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add -
+fatal: pathspec '-' did not match any files
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add .
+warning: in the working copy of 'meraatest1.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'notepad.html', LF will be replaced by CRLF the next time Git touches it
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   meraatest1.txt
+        new file:   notepad.html
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git commit -m 'this is third version control - 3rd file'
+[main 93b4bb7] this is third version control - 3rd file
+ Committer: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+ create mode 100644 notepad.html
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log
+commit 93b4bb73084e39879e961bf04529bb91f1fb15f3 (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Tue Jan 3 11:42:50 2023 +0530
+
+    this is third version control - 3rd file
+
+commit e33e15af42e67e4d7d1b13b9b6dfb646529077d5
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Fri Dec 30 09:53:16 2022 +0530
+
+    first commit
+
+commit d04e32ace4014e756c3fb5bbbf7f3ba5c5a5be32 (master)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Dec 28 12:50:17 2022 +0530
+
+    This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log -oneline
+fatal: unrecognized argument: -oneline
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log --oneline
+93b4bb7 (HEAD -> main) this is third version control - 3rd file
+e33e15a first commit
+d04e32a (master) This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git show
+commit 93b4bb73084e39879e961bf04529bb91f1fb15f3 (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Tue Jan 3 11:42:50 2023 +0530
+
+    this is third version control - 3rd file
+
+diff --git a/meraatest1.txt b/meraatest1.txt
+index 068faf4..49e4f3c 100644
+--- a/meraatest1.txt
++++ b/meraatest1.txt
+@@ -1,2 +1,2 @@
+-Akash tum mat dekho mera coding.
+-this is my second day practices.
++Ab to kuch samjha ................
++
+diff --git a/notepad.html b/notepad.html
+new file mode 100644
+index 0000000..499b10d
+--- /dev/null
++++ b/notepad.html
+@@ -0,0 +1,4 @@
++this is the third file for testing.
++
++hi jab tak naya hai dekho.
++dont touch around code
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git remote
+origin
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add orgin master
+fatal: pathspec 'orgin' did not match any files
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add origin master
+fatal: pathspec 'origin' did not match any files
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ which git
+/mingw64/bin/git
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git version
+git version 2.39.0.windows.2
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add remote https://github.com/Prachand-Aarambh/Kanha/
+fatal: pathspec 'remote' did not match any files
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git remote
+origin
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git clone https://github.com/Prachand-Aarambh/Kanha
+Cloning into 'Kanha'...
+fatal: unable to access 'https://github.com/Prachand-Aarambh/Kanha/': SSL certificate problem: self signed certificate in certificate chain
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git show
+commit 93b4bb73084e39879e961bf04529bb91f1fb15f3 (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Tue Jan 3 11:42:50 2023 +0530
+
+    this is third version control - 3rd file
+
+diff --git a/meraatest1.txt b/meraatest1.txt
+index 068faf4..49e4f3c 100644
+--- a/meraatest1.txt
++++ b/meraatest1.txt
+@@ -1,2 +1,2 @@
+-Akash tum mat dekho mera coding.
+-this is my second day practices.
++Ab to kuch samjha ................
++
+diff --git a/notepad.html b/notepad.html
+new file mode 100644
+index 0000000..499b10d
+--- /dev/null
++++ b/notepad.html
+@@ -0,0 +1,4 @@
++this is the third file for testing.
++
++hi jab tak naya hai dekho.
++dont touch around code
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git remote add https://github.com/Prachand-Aarambh/Kanha
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git rm cashed delete.html
+$ git log -p -2
+
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/.git/
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ ls
+ AppData/                 Links/                                                                                         OneDrive/       Videos/
+'Application Data'@      'Local Settings'@                                                                               Pictures/      'mcafee dlp quarantined files'/
+ Contacts/                Music/                                                                                         PrintHood@      meraproject/
+ Cookies@                'My Documents'@                                                                                 Recent@         ntuser.dat.LOG1
+ Desktop/                 NTUSER.DAT                                                                                    'Saved Games'/   ntuser.dat.LOG2
+ Documents/               NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TM.blf                                        Searches/       ntuser.ini
+ Downloads/               NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TMContainer00000000000000000001.regtrans-ms   SendTo@
+ Favorites/               NTUSER.DAT{2a9d3cf2-7d32-11ed-ae01-c880bedee46a}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@
+ IntelGraphicsProfiles/   NetHood@                                                                                       Templates@
+
+50043262@MBP50043262 MINGW64 ~ (master)
+$ cd meraproject
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ ll
+total 3
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 a.css
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 a1
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 a2
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 a3
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 b.java
+-rw-r--r-- 1 50043262 1049089   0 Jan  4 11:59 c.css
+-rw-r--r-- 1 50043262 1049089  36 Dec 30 13:04 meraatest1.txt
+-rw-r--r-- 1 50043262 1049089  87 Jan  3 11:41 notepad.html
+-rw-r--r-- 1 50043262 1049089 106 Jan  4 11:53 test.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ touch stag1.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ vi stag1.txt
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ cat stag1.txt
+this is testing for git stashing.
+stashing is process to put a work a side.
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash
+No local changes to save
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git nit
+git: 'nit' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        stag1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash
+No local changes to save
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git commit
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        stag1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash lists
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'lists'
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash --list
+error: unknown option `list'
+usage: git stash list [<log-options>]
+   or: git stash show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]
+   or: git stash drop [-q | --quiet] [<stash>]
+   or: git stash pop [--index] [-q | --quiet] [<stash>]
+   or: git stash apply [--index] [-q | --quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]
+                 [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]
+                 [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                 [--] [<pathspec>...]]
+   or: git stash save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]
+                 [-u | --include-untracked] [-a | --all] [<message>]
+   or: git stash clear
+   or: git stash create [<message>]
+   or: git stash store [(-m | --message) <message>] [-q | --quiet] <commit>
+
+    -k, --keep-index      keep index
+    -S, --staged          stash staged changes only
+    -p, --patch           stash in patch mode
+    -q, --quiet           quiet mode
+    -u, --include-untracked
+                          include untracked files in stash
+    -a, --all             include ignore files
+    -m, --message <message>
+                          stash message
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash list
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git add stag1.txt
+warning: in the working copy of 'stag1.txt', LF will be replaced by CRLF the next time Git touches it
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash
+Saved working directory and index state WIP on main: 3355ba3 ignore file testing
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git slash list
+git: 'slash' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash list
+stash@{0}: WIP on main: 3355ba3 ignore file testing
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git show
+commit 3355ba3d87caa09deb9e14409b9558c10030dbdb (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Jan 4 12:00:38 2023 +0530
+
+    ignore file testing
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..01b2241
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,3 @@
++.css,
++.java
++.xls
+diff --git a/a.css b/a.css
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a1 b/a1
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a2 b/a2
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a3 b/a3
+new file mode 100644
+index 0000000..e69de29
+diff --git a/b.java b/b.java
+new file mode 100644
+index 0000000..e69de29
+diff --git a/c.css b/c.css
+new file mode 100644
+index 0000000..e69de29
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log
+commit 3355ba3d87caa09deb9e14409b9558c10030dbdb (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Jan 4 12:00:38 2023 +0530
+
+    ignore file testing
+
+commit 3c63045ff6ce0f586f61eb10e81814670faa9bd4
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Jan 4 11:55:24 2023 +0530
+
+    marg ki dawa
+
+commit 93b4bb73084e39879e961bf04529bb91f1fb15f3
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Tue Jan 3 11:42:50 2023 +0530
+
+    this is third version control - 3rd file
+
+commit e33e15af42e67e4d7d1b13b9b6dfb646529077d5
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Fri Dec 30 09:53:16 2022 +0530
+
+    first commit
+
+commit d04e32ace4014e756c3fb5bbbf7f3ba5c5a5be32 (master)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Dec 28 12:50:17 2022 +0530
+
+    This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git stash apply stash@{0}
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   stag1.txt
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   stag1.txt
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/50043262/meraproject/.git/
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git reset
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        stag1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git rest --hard
+git: 'rest' is not a git command. See 'git --help'.
+
+The most similar commands are
+        restore
+        reset
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git reset --hard
+HEAD is now at 3355ba3 ignore file testing
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git reset .
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        stag1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ ^C
+
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log --oneline
+3355ba3 (HEAD -> main) ignore file testing
+3c63045 marg ki dawa
+93b4bb7 this is third version control - 3rd file
+e33e15a first commit
+d04e32a (master) This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag -a dawadaru -m "Merj ki dwa hi daru hai" 3c63045
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git show
+commit 3355ba3d87caa09deb9e14409b9558c10030dbdb (HEAD -> main)
+Author: Prachand-Aarambh <50043262@LNTFINSVCS.COM>
+Date:   Wed Jan 4 12:00:38 2023 +0530
+
+    ignore file testing
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..01b2241
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,3 @@
++.css,
++.java
++.xls
+diff --git a/a.css b/a.css
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a1 b/a1
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a2 b/a2
+new file mode 100644
+index 0000000..e69de29
+diff --git a/a3 b/a3
+new file mode 100644
+index 0000000..e69de29
+diff --git a/b.java b/b.java
+new file mode 100644
+index 0000000..e69de29
+diff --git a/c.css b/c.css
+new file mode 100644
+index 0000000..e69de29
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git commit;
+On branch main
+nothing to commit, working tree clean
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log --oneline
+3355ba3 (HEAD -> main) ignore file testing
+3c63045 (tag: dawadaru) marg ki dawa
+93b4bb7 this is third version control - 3rd file
+e33e15a first commit
+d04e32a (master) This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag
+dawadaru
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag -d dawadaru
+Deleted tag 'dawadaru' (was 5fdc3d0)
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git log --oneline
+3355ba3 (HEAD -> main) ignore file testing
+3c63045 marg ki dawa
+93b4bb7 this is third version control - 3rd file
+e33e15a first commit
+d04e32a (master) This is my first word to add in git directory
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag -a dawadaru -m "Merj ki dwa hi daru hai" 3c63045
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+$ git tag
+dawadaru
+
+50043262@MBP50043262 MINGW64 ~/meraproject (main)
+
+
+Note: Use global to set the username and e-mail for every repository on your computer.
+If you want to set the username/e-mail for just the current repo, you can remove global
+
+
+Now Git is aware of the file, but has not added it to our repository!
+
+Files in your Git repository folder can be in one of 2 states:
+
+    Tracked - files that Git knows about and are added to the repository
+    Untracked - files that are in your working directory, but not added to the repository
+
+ When you first add files to an empty repository, they are all untracked. To get Git to track them, you need to stage them, or add them to the staging environment.
+ Git Staging Environment
+
+One of the core functions of Git is the concepts of the Staging Environment, and the Commit.
+
+As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.
+
+Staged files are files that are ready to be committed to the repository you are working on. You will learn more about commit shortly.
+Git Commit
+
+Since we have finished our work, we are ready move from stage to commit for our repo.
+
+Adding commits keep track of our progress and changes as we work. Git considers each commit change point or "save point". It is a point in the project you can go back to if you find a bug, or want to make a change.
+
+When we commit, we should always include a message.
+
+By adding clear messages to each commit, it is easy for yourself (and others) to see what has changed and when.
+There are a couple of different ways you can use the help command in command line:
+
+    git command -help -  See all the available options for the specific command
+    git help --all -  See all possible commands
+
+Working with Git Branches
+
+In Git, a branch is a new/separate version of the main repository.
+
+Let's say you have a large project, and you need to update the design on it.
+
+How would that work without and with Git:
+
+Without Git:
+
+    Make copies of all the relevant files to avoid impacting the live version
+    Start working with the design and find that code depend on code in other files, that also need to be changed!
+    Make copies of the dependant files as well. Making sure that every file dependency references the correct file name
+    EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!
+    Save all your files, making a note of the names of the copies you were working on
+    Work on the unrelated error and update the code to fix it
+    Go back to the design, and finish the work there
+    Copy the code or rename the files, so the updated design is on the live version
+    (2 weeks later, you realize that the unrelated error was not fixed in the new design version because you copied the files before the fix)
+
+With Git:
+
+    With a new branch called new-design, edit the code directly without impacting the main branch
+    EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!
+    Create a new branch from the main project called small-error-fix
+    Fix the unrelated error and merge the small-error-fix branch with the main branch
+    You go back to the new-design branch, and finish the work there
+    Merge the new-design branch with main (getting alerted to the small error fix that you were missing)
+
+Branches allow you to work on different parts of a project without impacting the main branch.
+
+When the work is complete, a branch can be merged with the main project.
+
+You can even switch between branches and work on different projects without them interfering with each other.
+
+Branching in Git is very lightweight and fast!
+
+
+We can see the new branch with the name "hello-world-images", but the * beside master specifies that we are currently on that branch.
+
+checkout is the command used to check out a branch. Moving us from the current branch, to the one specified at the end of the command:
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (master)
+$ git branch devops1
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (master)
+$ git branch
+  devops1
+* master
+  merabhart1
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (master)
+$ pwd
+/d/GIT/ltfs_release
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (master)
+$ git checkout devops1
+Switched to branch 'devops1'
+M       Index1.html
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (devops1)
+$ git branch
+* devops1
+  master
+  merabhart1
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (devops1)
+$ git checkout merabhart1
+Switched to branch 'merabhart1'
+M       Index1.html
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ ls
+Index.html.txt  Index1.html
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git commit -m 'Devops Sab Dekhata Hai'
+On branch merabhart1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Index1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git stTUS
+git: 'stTUS' is not a git command. See 'git --help'.
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ GIT status
+On branch merabhart1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Index1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git init
+Reinitialized existing Git repository in D:/GIT/ltfs_release/.git/
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git status
+On branch merabhart1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Index1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git commit -m 'dev 1'
+On branch merabhart1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Index1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$ git log
+commit 5f33b386064c93f8401aa29ef543eba44e32d707 (HEAD -> merabhart1)
+Author: Prachand-Aarambh <maneeshbaba.gmail.com>
+Date:   Mon May 8 14:57:18 2023 +0530
+
+    Second File has been updated
+
+commit 29595dc4e351b59cc71698e5ce83067f2532a238
+Author: Prachand-Aarambh <maneeshbaba.gmail.com>
+Date:   Mon May 8 14:49:02 2023 +0530
+
+    Fisrt commit to release
+
+50043262@MBP50043262 MINGW64 /d/GIT/ltfs_release (merabhart1)
+$
